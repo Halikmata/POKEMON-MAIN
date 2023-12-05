@@ -10,7 +10,7 @@ class PokemonAdmin(admin.ModelAdmin):
     
 @admin.register(Trainer)
 class TrainerAdmin(admin.ModelAdmin):
-    list_display = ("name", "location", "email")
+    list_display = ("name", "location", "email", "birthdate")
     search_fields = ("name",)
     
 @admin.register(Collection)
