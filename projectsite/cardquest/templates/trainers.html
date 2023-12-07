@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!--TRAINERS-->
+<section class="trainers-container">
+    <table class="styled-table">
+      <tbody>
+        <tr>
+          <th>Trainer Name</th>
+          <th>Birthdate</th>
+          <th>Location</th>
+          <th>Email</th>
+        </tr>
+        {% for object in object_list %}
+        <!--ASH-->
+        <tr>
+          <td>{{ object.name }}</td>
+          <td>{{ object.birthdate }}</td>
+          <td>{{ object.location }}</td>
+          <td>{{ object.email}} </td>
+        </tr>
+        {% empty %}
+                <tr>
+                <td colspan="4" style="text-align: center;">
+                    <p>No Records Found</p>
+                </td>
+                </tr>
+        {% endfor %}
+        <!--GARY-->
+        
+      </tbody>
+    </table>
+    
+    
+  </section>
+  <div>
+    {% include 'includes/pagination.html' %}
+  </div>
+   
+  
+  
+  
+{% endblock %}
