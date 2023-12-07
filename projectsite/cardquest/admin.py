@@ -3,6 +3,8 @@ from .models import PokemonCard, Trainer, Collection
 
 # Register your models here.
 # admin.site.register(PokemonCard)
+# admin.site.register(Trainer)
+# admin.site.register(Collection)
 @admin.register(PokemonCard)
 class PokemonAdmin(admin.ModelAdmin):
     list_display = ("name", "rarity", "hp", "card_type", "attack", "description", "weakness", "card_number", "release_date", "evolution_stage", "abilities")
