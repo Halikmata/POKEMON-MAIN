@@ -62,20 +62,6 @@ class TrainerDeleteView(DeleteView):
 #         qs = super(PokemonCard, self).get_queryset(*args, **kwargs)
 #         return qs
     
-class Collection(ListView):
-    model = Collection
-    context_object_name = 'collection'
-    template_name = 'collection.html'
-    paginate_by = 5
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
-
-    def get_queryset(self, *args, **kwargs):
-        qs = super(Collection, self).get_queryset(*args, **kwargs)
-        return qs
-    
 class PokemonCardListView(ListView):
     model = PokemonCard
     context_object_name = 'pokemoncard'
@@ -107,3 +93,26 @@ class PokemonDeleteView(DeleteView):
     model = PokemonCard
     template_name = 'delete.html'
     success_url = reverse_lazy('pokemoncard-list')
+    
+class CollectionListView(ListView):
+    model = Collection
+    context_object_name = 'collection'
+    template_name = 'collection.html'
+    paginate_by = 5
+
+class CollectionCreateView(CreateView):
+    model = Collection
+    form_class = CollectionForm
+    template_name = 'add.html'
+    success_url = reverse_lazy('collection-list')    
+    
+class CollectionUpdateView(UpdateView):
+    model = Collection
+    form_class = CollectionForm
+    template_name = 'edit.html'
+    success_url = reverse_lazy('collection-list')
+    
+class CollectionDeleteView(DeleteView):
+    model = Collection
+    template_name = 'delete.html'
+    success_url = reverse_lazy('collection-list')

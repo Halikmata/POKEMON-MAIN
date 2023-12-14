@@ -1,8 +1,9 @@
 {% extends 'pokemonnavbarbase.html' %}
 {% load static %}
 {% block content %}
-<a href="{% url 'pokemoncard-add' %}" class="btn btn-outline-primary">Add New Card</a><br>
+
   <section class="cards-container">
+    <a href="{% url 'pokemoncard-add' %}" class="btn btn-outline-primary">Add New Card</a><br>
     <!-- Display Pokemon Cards -->
     {% for card in pokemoncard %}
       <div class="card-box">
