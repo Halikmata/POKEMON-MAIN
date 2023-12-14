@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cardquest.views import HomePageView, TrainerList, PokemonCard, Collection
+from cardquest.views import HomePageView, TrainerList, PokemonCard, Collection, TrainerCreateView
 from cardquest import views
 
 urlpatterns = [
@@ -25,4 +25,5 @@ urlpatterns = [
     path('trainer_list', views.TrainerList.as_view(), name='trainer-list'),  
     path('pokemoncard_list', views.PokemonCard.as_view(), name='pokemoncard-list'),  
     path('collection_list', views.Collection.as_view(), name='collection-list'),  
+    path('trainer_list/add', views.TrainerCreateView.as_view(), name='trainer-add'),  
 ]
