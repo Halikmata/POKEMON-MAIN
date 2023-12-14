@@ -1,0 +1,32 @@
+{
+    "pokemons": [
+    {
+    "name": "Pikachu",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+    },
+    {
+    "name": "Charmeleon",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+    },
+    {
+    "name": "Mewtwo",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png"
+    },
+    {
+    "name": "Caterpie",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+    },
+    {
+    "name": "Squirtle",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+    },
+    {
+    "name": "Eevee",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png"
+    },
+    {
+    "name": "Snorlax",
+    "image_url": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png"
+    }
+    ]
+}
