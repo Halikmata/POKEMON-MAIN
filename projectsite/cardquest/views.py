@@ -1,7 +1,9 @@
 from django.shortcuts import render
-
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from cardquest.models import PokemonCard, Trainer, Collection
+from cardquest.forms import TrainerForm
+from django.urls import reverse_lazy
 
 
 class HomePageView(ListView):
