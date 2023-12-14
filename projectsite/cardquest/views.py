@@ -57,3 +57,9 @@ class Collection(ListView):
     def get_queryset(self, *args, **kwargs):
         qs = super(Collection, self).get_queryset(*args, **kwargs)
         return qs
+    
+class TrainerCreateView(CreateView):
+    model = Trainer
+    form_class = TrainerForm
+    template_name = 'trainer_add.html'
+    success_url = reverse_lazy('trainer-list')
